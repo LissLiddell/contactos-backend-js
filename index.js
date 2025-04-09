@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
 const authRoutes = require('./src/routes/auth.routes');
+const contactRoutes = require('./src/routes/contact.routes');
 
 const { AppDataSource } = require('./src/config/data-source');
 const User = require('./src/entities/User');
@@ -19,6 +20,8 @@ app.get('/', (_req, res) => {
 });
 
 app.use('/api/auth', authRoutes);
+
+app.use('/api/contacts', contactRoutes);
 
 // Inicializar base de datos y servidor
 AppDataSource.initialize()
