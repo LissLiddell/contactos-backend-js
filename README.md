@@ -30,18 +30,18 @@ npm install
 node index.js
 
 * Endpoints Autenticación
-POST	/api/auth/register	Crear nuevo usuario
-POST	/api/auth/login	Iniciar sesión (token)
+ POST	/api/auth/register	Crear nuevo usuario
+- POST	/api/auth/login	Iniciar sesión (token)
 
 * Contactos (protegidos con JWT)
-POST	/api/contacts	Crear nuevo contacto
-GET	/api/contacts	Obtener todos los contactos
-PUT	/api/contacts/:id	Actualizar un contacto
-DELETE	/api/contacts/:id	Eliminar un contacto
+- POST	/api/contacts	Crear nuevo contacto
+- GET	/api/contacts	Obtener todos los contactos
+- PUT	/api/contacts/:id	Actualizar un contacto
+- DELETE	/api/contacts/:id	Eliminar un contacto
 
 --Todos los endpoints de contactos requieren el header:
-Authorization: Bearer TU_TOKEN que lanza login
+- Authorization: Bearer TU_TOKEN que lanza login
 
 *Headers en las rutas protegidas:
-Content-Type: application/json
-Authorization: Bearer TU_TOKEN
+- Content-Type: application/json
+- Authorization: Bearer TU_TOKEN
