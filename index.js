@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
+const authRoutes = require('./src/routes/auth.routes');
 
 const { AppDataSource } = require('./src/config/data-source');
 const User = require('./src/entities/User');
@@ -16,6 +17,8 @@ app.use(express.json());
 app.get('/', (_req, res) => {
   res.send('API funcionando 🧃');
 });
+
+app.use('/api/auth', authRoutes);
 
 // Inicializar base de datos y servidor
 AppDataSource.initialize()
