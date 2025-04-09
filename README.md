@@ -30,7 +30,7 @@ npm install
 node index.js
 
 5. Endpoints Autenticación
- POST	/api/auth/register	Crear nuevo usuario
+- POST	/api/auth/register	Crear nuevo usuario
 - POST	/api/auth/login	Iniciar sesión (token)
 
 6. Contactos (protegidos con JWT)
